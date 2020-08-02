@@ -11,12 +11,19 @@ $color-titulos: #2d2e32;
 $bg-secciones-secundarias: #eef2f7;
 $bg-secciones-terciarias: #222222;
 $fuente-principal: "Old Standard TT";
+$fuente-principal-bold: "Old Standard TT Bold";
 $fuente-textos: "Open Sans";
 
 @font-face {
   font-family: "Old Standard TT";
   src: url("/Fonts/OldStandardTT-Regular.ttf");
 }
+
+@font-face {
+  font-family: "Old Standard TT Bold";
+  src: url("/Fonts/OldStandardTT-Bold.ttf");
+}
+
 @font-face {
   font-family: "Open Sans";
   src: url("/Fonts/OpenSans-Regular.ttf");
@@ -41,12 +48,57 @@ img {
   width: 100%;
 }
 
+.titulo-principal {
+  font-size: 40px;
+  font-family: $fuente-principal;
+  font-weight: 100;
+  text-transform: capitalize;
+}
+
+.numero {
+  font-size: 40px;
+  font-family: $fuente-principal-bold;
+  color: $color-seleccion;
+  font-weight: bold;
+}
+
+.texto-comun {
+  font-size: 18px;
+  font-family: $fuente-textos;
+  color: $color-textos-comunes;
+}
+
+.mini-textos {
+  font-size: 14px;
+  font-family: $fuente-textos;
+  color: $color-seleccion;
+  text-transform: uppercase;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  margin: 0 0 25px 0;
+}
+
+.texto-quotes {
+  font-size: 22px;
+  font-family: $fuente-principal;
+  color: $color-textos;
+  text-align: center;
+  line-height: 1.5;
+}
+
 //SWIPER
 .swiper-container,
 .swiper-container-dos,
-.swiper-container-tres {
+.swiper-container-tres,
+.swiper-container-cuatro,
+.swiper-container-cinco {
   width: 100%;
   height: 100%;
+  overflow: hidden;
+}
+.swiper-container-cinco {
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .swiper-slide {
@@ -79,18 +131,25 @@ img {
 .navegacion-principal {
   width: 100%;
   height: 70px;
-  background: red;
-  z-index: 99;
   padding: 0 20px;
   @include flexbox(row, center, center);
   .hamburguesa {
-    width: 20px;
+    width: 50px;
     height: 50px;
-    background: blue;
+    position: fixed;
+    left: 10px;
+    z-index: 999;
+    @include flexbox(column, center, center);
+    background: white;
+  }
+  .linea-hamburguesa {
+    width: 30px;
+    height: 3px;
+    background: $color-seleccion;
+    margin: 5px 0;
   }
   .logo {
-    background: green;
-    width: calc(100% - 20px);
+    width: 200px;
     height: 100%;
   }
 }
@@ -108,6 +167,10 @@ img {
 .oferta {
   width: 100%;
   overflow: hidden;
+  .imagen-casa {
+    background: aqua;
+    height: 70px;
+  }
 }
 
 .intro {
@@ -117,17 +180,15 @@ img {
     width: 100%;
     height: 100px;
     margin: 10px 0;
-    background: red;
     @include flexbox(column, space-evenly, center);
   }
   .galeria {
     width: 100%;
-    background: aqua;
     margin-top: 100px;
   }
   .contenedor-imagen-galeria {
     width: 100%;
-    height: 150px;
+    height: 180px;
     margin: 20px 0;
     background: green;
   }
@@ -139,14 +200,22 @@ img {
 }
 
 .testimoniales {
+  background: $bg-secciones-secundarias;
   width: 100%;
   padding: 100px 20px;
+  .contenedor-titulos {
+    margin-bottom: 10px;
+  }
   .testimonio {
     width: 100%;
-    height: 250px;
-    background: red;
     @include flexbox(column, flex-start, center);
     padding: 20px;
+  }
+  .texto-quotes {
+    margin-bottom: 30px;
+  }
+  .texto-comun {
+    margin: 5px 0;
   }
 }
 
@@ -155,6 +224,11 @@ img {
   height: 200px;
   background: $bg-secciones-terciarias;
   padding: 0 20px;
+  .logo-empresa {
+    background: red;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .oferta {
@@ -175,12 +249,30 @@ img {
   .carrusel-equipo {
     width: 90%;
     height: 500px;
-    background: red;
   }
   .carta-equipo {
     width: 100%;
-    background: aqua;
     height: 80%;
+    @include flexbox(column, center, center);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.089);
+    .titulo-principal {
+      font-size: 24px;
+    }
+  }
+  .imagen-carta {
+    width: 100%;
+    height: 50%;
+  }
+  .descripcion-carta {
+    width: 100%;
+    height: 50%;
+    @include flexbox(column, space-evenly, center);
+    padding: 20px;
+    background: white;
+  }
+  .texto-comun {
+    font-size: 16px;
+    line-height: 2;
   }
 }
 
@@ -188,7 +280,6 @@ img {
   width: 100%;
   .contenedor-titulos {
     padding: 100px 20px;
-    background: red;
     margin: 0;
   }
   .contenedor-mapa {
@@ -196,10 +287,20 @@ img {
     height: 350px;
     background: green;
   }
+  .titulo-principal {
+    margin-bottom: 20px;
+  }
+  .texto-comun {
+    line-height: 2;
+  }
 }
 
 footer {
   width: 100%;
   height: 70px;
   background: $bg-secciones-terciarias;
+  @include flexbox(row, center, center);
+  .texto-comun {
+    color: $color-seleccion;
+  }
 }
