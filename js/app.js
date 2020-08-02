@@ -29,6 +29,8 @@ var swiper = new Swiper(".swiper-container-dos", {
 var swiper = new Swiper(".swiper-container-tres", {
   speed: 600,
   parallax: true,
+  autoplay: true,
+  speed: 1000,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
