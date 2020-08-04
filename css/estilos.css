@@ -212,6 +212,15 @@ img {
           justify-content: center;
 }
 
+.nav-desktop .texto-logo {
+  font-size: 32px;
+  letter-spacing: 1px;
+}
+
+.nav-desktop .img-logo {
+  margin-right: 10px;
+}
+
 .nav-desktop .links-nav {
   width: 100%;
   height: calc(100% - 100px);
