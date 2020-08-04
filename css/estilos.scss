@@ -53,9 +53,11 @@ img {
 }
 
 .titulo-principal {
-  font-size: 40px;
+  font-size: clamp(40px, 4.9vw, 60px);
   font-family: $fuente-principal;
   font-weight: 100;
+}
+.titulo-principal:first-letter {
   text-transform: capitalize;
 }
 
@@ -112,6 +114,19 @@ img {
     font-size: 2.5rem;
     @include flexbox(row, center, flex-end);
     color: $color-seleccion;
+  }
+}
+
+.division {
+  width: 100%;
+  display: block;
+  height: 20px;
+  @include flexbox(row, center, center);
+  .linea-division {
+    width: 20px;
+    height: 2px;
+    background: $color-seleccion;
+    margin: 0 5px;
   }
 }
 
@@ -274,6 +289,9 @@ img {
     height: 100px;
     margin: 10px 0;
     @include flexbox(column, space-evenly, center);
+    .texto-comun {
+      text-transform: capitalize;
+    }
   }
   .galeria {
     width: 100%;
@@ -316,6 +334,7 @@ img {
     padding: 20px;
   }
   .texto-quotes {
+    max-width: 750px;
     margin-bottom: 30px;
   }
   .texto-comun {
