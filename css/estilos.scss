@@ -90,6 +90,31 @@ img {
   line-height: 1.5;
 }
 
+.logo {
+  width: 250px;
+  height: 100%;
+  @include flexbox(row, flex-start, center);
+  .img-logo {
+    width: 45px;
+    height: 45px;
+    margin-right: 5px;
+  }
+  .texto-logo {
+    font-family: "DM Serif Display", serif;
+    font-size: 28px;
+    color: black;
+    transform: scale(1, 1);
+    @include flexbox(row, center, center);
+    font-weight: bolder;
+  }
+  .punto {
+    width: 15px;
+    font-size: 2.5rem;
+    @include flexbox(row, center, flex-end);
+    color: $color-seleccion;
+  }
+}
+
 //SWIPER
 .swiper-container,
 .swiper-container-dos,
@@ -124,7 +149,29 @@ img {
 }
 
 .nav-desktop {
-  display: none;
+  position: fixed;
+  left: 0;
+  width: 320px;
+  background: white;
+  height: 100%;
+  top: 0;
+  display: none; //OCULTA HASTA LOS 1024PX
+  .logo {
+    height: 100px;
+    width: 100%;
+    justify-content: center;
+  }
+  .links-nav {
+    width: 100%;
+    height: calc(100% - 100px);
+    padding-top: 50px;
+    @include flexbox(column, flex-start, center);
+    list-style-type: none;
+  }
+  .link {
+    margin: 25px 0;
+    color: $color-textos-comunes;
+  }
 }
 
 //INICIO NAV-PRINCIPAL
@@ -152,29 +199,11 @@ img {
     background: $color-seleccion;
     margin: 3px 0;
   }
-  .logo {
-    width: 250px;
-    height: 100%;
-    @include flexbox(row, flex-start, center);
-  }
-  .img-logo {
-    width: 45px;
-    height: 45px;
-    margin-right: 5px;
-  }
-  .texto-logo {
-    font-family: "DM Serif Display", serif;
-    font-size: 28px;
-    color: black;
-    transform: scale(1, 1);
-    @include flexbox(row, center, center);
-    font-weight: bolder;
-  }
-  .punto {
-    width: 15px;
-    font-size: 2.5rem;
-    @include flexbox(row, center, flex-end);
-    color: $color-seleccion;
+}
+
+@media (min-width: 1024px) {
+  .navegacion-principal {
+    display: none;
   }
 }
 
@@ -218,6 +247,12 @@ img {
   .img-03 {
     background: url("/imagenes/pexels-pixabay-221540.jpg") center / cover
       no-repeat;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-portada {
+    min-height: 100vh;
   }
 }
 .oferta {
@@ -405,5 +440,20 @@ footer {
   @include flexbox(row, center, center);
   .texto-comun {
     color: $color-seleccion;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contenido-principal {
+    width: calc(100% - 320px);
+    margin-left: auto;
+  }
+}
+
+//NAV DESKTOP
+
+@media (min-width: 1024px) {
+  .nav-desktop {
+    @include flexbox(column, flex-start, center);
   }
 }
