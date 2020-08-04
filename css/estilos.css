@@ -268,7 +268,7 @@ img {
 
 .hero-portada {
   width: 100%;
-  height: 600px;
+  height: 685px;
   overflow: hidden;
   position: relative;
 }
@@ -302,15 +302,15 @@ img {
 }
 
 .hero-portada .img-01 {
-  background: url("/imagenes/pexels-binyamin-mellish-106399.jpg") center/cover no-repeat;
+  background: url("/imagenes/header/hero01.webp") center/cover no-repeat;
 }
 
 .hero-portada .img-02 {
-  background: url("/imagenes/pexels-pixabay-164558.jpg") center/cover no-repeat;
+  background: url("/imagenes/header/hero02.webp") center/cover no-repeat;
 }
 
 .hero-portada .img-03 {
-  background: url("/imagenes/pexels-pixabay-221540.jpg") center/cover no-repeat;
+  background: url("/imagenes/header/hero03.webp") center/cover no-repeat;
 }
 
 @media (min-width: 1024px) {

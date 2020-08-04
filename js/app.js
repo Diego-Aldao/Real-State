@@ -10,9 +10,9 @@ var swiper = new Swiper(".swiper-container", {
       slidesPerView: 2,
       spaceBetween: 0,
     },
-    1440: {
+    1244: {
       slidesPerView: 3,
-      spaceBetween: 0,
+      spaceBetween: 20,
     },
   },
   pagination: {
