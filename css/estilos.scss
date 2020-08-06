@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
@@ -52,12 +53,15 @@ img {
   object-fit: fill;
 }
 
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
 .titulo-principal {
   font-size: clamp(40px, 4.9vw, 60px);
   font-family: $fuente-principal;
   font-weight: 100;
-}
-.titulo-principal:first-letter {
   text-transform: capitalize;
 }
 
@@ -130,6 +134,16 @@ img {
   }
 }
 
+.swiper-pagination-bullet {
+  background-color: black;
+  width: 40px;
+  border-radius: 0px;
+  height: 3px;
+}
+.swiper-pagination-bullet-active {
+  background: $color-seleccion;
+}
+
 //SWIPER
 .swiper-container,
 .swiper-container-dos,
@@ -147,20 +161,7 @@ img {
 
 .swiper-slide {
   text-align: center;
-  font-size: 18px;
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
+  @include flexbox(row, center, center);
 }
 
 .nav-desktop {
@@ -193,6 +194,31 @@ img {
   .link {
     margin: 25px 0;
     color: $color-textos-comunes;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    transition: color 0.1s ease-in-out 0.1s;
+    padding: 5px;
+  }
+  .link:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: -100%;
+    top: 0;
+    background: $color-seleccion;
+    transition: left 0.2s ease-in-out;
+
+    z-index: -1;
+  }
+  .link:hover {
+    & {
+      color: white;
+    }
+    &:after {
+      left: 0;
+    }
   }
 }
 
@@ -383,7 +409,6 @@ img {
     max-height: 240px;
   }
 }
-
 .equipo {
   width: 100%;
   padding: 100px 20px;
@@ -435,7 +460,6 @@ img {
   .contenedor-mapa {
     width: 100%;
     height: 350px;
-    background: green;
   }
   .titulo-principal {
     margin-bottom: 20px;
@@ -458,7 +482,7 @@ img {
 
 footer {
   width: 100%;
-  height: 70px;
+  height: 50px;
   background: $bg-secciones-terciarias;
   @include flexbox(row, center, center);
   .texto-comun {

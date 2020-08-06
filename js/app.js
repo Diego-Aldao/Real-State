@@ -72,3 +72,32 @@ var swiper = new Swiper(".swiper-container-cinco", {
   slidesPerView: 1,
   spaceBetween: 30,
 });
+
+//LEAFLET
+
+var map = L.map("leaflet-mapa").setView([-32.910181, -68.846877], 16);
+
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  attribution:
+    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+}).addTo(map);
+
+L.marker([-32.909399, -68.843954])
+  .addTo(map)
+  .bindPopup("CASA NRO-02")
+  .openPopup();
+
+L.marker([-32.907778, -68.848224])
+  .addTo(map)
+  .bindPopup("CASA NRO-03")
+  .openPopup();
+
+L.marker([-32.911775, -68.845755])
+  .addTo(map)
+  .bindPopup("CASA NRO-04")
+  .openPopup();
+
+L.marker([-32.910181, -68.846877])
+  .addTo(map)
+  .bindPopup("CASA NRO-01")
+  .openPopup();

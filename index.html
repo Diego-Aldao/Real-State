@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Golden Group</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="" />
     <link rel="stylesheet" href="/css/estilos.css">
 </head>
 
@@ -83,7 +86,7 @@
                 </div>
             </div>
         </section>
-        <section class="testimoniales">
+        <section id="testimonios" class="testimoniales">
             <header class="contenedor-titulos">
                 <p class="mini-textos">compradores felices</p>
                 <h1 class="titulo-principal">testimoniales</h1>
@@ -147,7 +150,11 @@
                 </div>
             </div>
         </section>
-        <section class="oferta">
+        <section id="cerca-tuyo" class="oferta">
+            <header class="contenedor-titulos">
+                <p class="mini-textos">la mejor oferta</p>
+                <h1 class="titulo-principal">cerca tuyo</h1>
+            </header>
             <div class="imagen-principal">
                 <img src="/imagenes/oferta/principal-movil.webp" alt="">
             </div>
@@ -168,7 +175,7 @@
                 </div>
             </div>
         </section>
-        <section class="equipo">
+        <section id="equipo" class="equipo">
             <header class="contenedor-titulos">
                 <h1 class="titulo-principal">nuestro equipo</h1>
                 <span class="division"> <span class="linea-division"></span>
@@ -256,11 +263,11 @@
         </section>
         <section class="google-maps">
             <header class="contenedor-titulos">
-                <h1 class="titulo-principal">sitios</h1>
+                <h1 class="titulo-principal">en venta</h1>
                 <p class="texto-comun">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate harum at
                     est assumenda inventore?</p>
             </header>
-            <div class="contenedor-mapa"></div>
+            <div id="leaflet-mapa" class="contenedor-mapa"></div>
         </section>
         <footer>
             <p class="texto-comun">&copy; Golden Group 2020.</p>
@@ -273,13 +280,16 @@
             <span class="texto-logo">Golden Group</span> <span class="punto">.</span>
         </div>
         <ul class="links-nav">
-            <li class="link mini-textos">Inicio</li>
-            <li class="link mini-textos">Testimonios</li>
-            <li class="link mini-textos">Equipo</li>
-            <li class="link mini-textos">Nosotros</li>
+            <li class="link mini-textos"><a href="#">inicio</a></li>
+            <li class="link mini-textos"><a href="#testimonios">testimonios</a></li>
+            <li class="link mini-textos"><a href="#cerca-tuyo">cerca tuyo</a></li>
+            <li class="link mini-textos"><a href="#equipo">equipo</a></li>
         </ul>
     </aside>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
     <script src="js/app.js"></script>
 </body>
 
