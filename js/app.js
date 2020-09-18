@@ -1,4 +1,4 @@
-var swiper = new Swiper(".swiper-container", {
+var swiper = new Swiper(".swiper-container-equipo", {
   slidesPerView: 1,
   spaceBetween: 30,
   autoplay: true,
@@ -23,13 +23,13 @@ var swiper = new Swiper(".swiper-container", {
   },
 });
 
-var swiper = new Swiper(".swiper-container-dos", {
+var swiper = new Swiper(".swiper-container-ofertas", {
   slidesPerView: 3,
   spaceBetween: 10,
   loop: true,
 });
 
-var swiper = new Swiper(".swiper-container-tres", {
+var swiper = new Swiper(".swiper-container-header", {
   speed: 600,
   parallax: true,
   autoplay: true,
@@ -44,7 +44,7 @@ var swiper = new Swiper(".swiper-container-tres", {
   },
 });
 
-var swiper = new Swiper(".swiper-container-cuatro", {
+var swiper = new Swiper(".swiper-container-empresas", {
   slidesPerView: 1,
   spaceBetween: 30,
   autoplay: true,
@@ -70,7 +70,7 @@ var swiper = new Swiper(".swiper-container-cuatro", {
   },
 });
 
-var swiper = new Swiper(".swiper-container-cinco", {
+var swiper = new Swiper(".swiper-container-testimonios", {
   slidesPerView: 1,
   spaceBetween: 30,
 });

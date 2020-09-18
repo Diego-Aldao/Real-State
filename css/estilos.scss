@@ -140,16 +140,16 @@ a {
 }
 
 //SWIPER
-.swiper-container,
-.swiper-container-dos,
-.swiper-container-tres,
-.swiper-container-cuatro,
-.swiper-container-cinco {
+.swiper-container-empresas,
+.swiper-container-equipo,
+.swiper-container-header,
+.swiper-container-testimonios,
+.swiper-container-ofertas {
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
-.swiper-container-cinco {
+.swiper-container-testimonios {
   max-width: 900px;
   margin: 0 auto;
 }
@@ -436,7 +436,7 @@ a {
     max-height: 400px;
     margin: 0 auto 20px;
   }
-  .swiper-container-dos {
+  .swiper-container-ofertas {
     max-width: 720px;
     margin: 0 auto;
   }
