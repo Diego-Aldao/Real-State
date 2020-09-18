@@ -4,40 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Golden Group</title>
+    <!--fontAwesome-->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
       integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
       crossorigin="anonymous"
     />
+    <!--swiper-->
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
+    <!--leaflet-->
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
       integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
       crossorigin=""
     />
+    <!--locales-->
     <link rel="stylesheet" href="/css/estilos.css" />
   </head>
 
   <body>
     <main class="contenido-principal">
+      <!--INICIO NAVEGACION PRINCIPAL-->
       <nav class="navegacion-principal">
         <div class="hamburguesa">
           <span class="linea-hamburguesa"></span>
           <span class="linea-hamburguesa"></span>
           <span class="linea-hamburguesa"></span>
         </div>
-        <!--A DEFINIR LA TIPOGRAFIA-->
         <div class="logo">
           <img class="img-logo" src="/imagenes/your-logo.png" alt="" />
           <span class="texto-logo">Golden Group</span>
           <span class="punto">.</span>
         </div>
       </nav>
+      <!--INICIO PORTADA-->
       <header class="hero-portada">
         <div class="contenedor-header">
           <h1 class="titulo-principal">
@@ -61,6 +66,7 @@
           <div class="swiper-pagination swiper-pagination-white"></div>
         </div>
       </header>
+      <!--INICIO SECCION PRINCIPAL-->
       <section class="intro">
         <header class="contenedor-titulos">
           <h1 class="titulo-principal">vision general</h1>
@@ -130,6 +136,7 @@
           </div>
         </div>
       </section>
+      <!--INICIO SECCION TESTIMONIOS-->
       <section id="testimonios" class="testimoniales">
         <header class="contenedor-titulos">
           <p class="mini-textos">compradores felices</p>
@@ -181,6 +188,7 @@
           </div>
         </div>
       </section>
+      <!--INICIO SECCION EMPRESAS-->
       <section class="empresas">
         <div class="swiper-container-cuatro">
           <div class="swiper-wrapper">
@@ -211,6 +219,7 @@
           </div>
         </div>
       </section>
+      <!--INICIO SECCION OFERTAS-->
       <section id="cerca-tuyo" class="oferta">
         <header class="contenedor-titulos">
           <p class="mini-textos">la mejor oferta</p>
@@ -240,6 +249,7 @@
           </div>
         </div>
       </section>
+      <!--INICIO SECCION EQUIPO-->
       <section id="equipo" class="equipo">
         <header class="contenedor-titulos">
           <h1 class="titulo-principal">nuestro equipo</h1>
@@ -358,6 +368,7 @@
           <div class="swiper-pagination"></div>
         </div>
       </section>
+      <!--INICIO SECCION FINAL-->
       <section class="google-maps">
         <header class="contenedor-titulos">
           <h1 class="titulo-principal">en venta</h1>
@@ -368,10 +379,12 @@
         </header>
         <div id="leaflet-mapa" class="contenedor-mapa"></div>
       </section>
+      <!--INICIO FOOTER-->
       <footer>
         <p class="texto-comun">&copy; Golden Group 2020.</p>
       </footer>
     </main>
+    <!--FIN CONTENIDO PRINCIPAL-->
     <!--MODAL-IMAGENES-PRINCIPALES-->
     <div class="contenedor-modal">
       <div class="contenedor-imagen-modal">
@@ -401,6 +414,7 @@
         <li class="link mini-textos"><a href="#equipo">equipo</a></li>
       </ul>
     </aside>
+    <!--SCRIPTS-->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script
       src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
