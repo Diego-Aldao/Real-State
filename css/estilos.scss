@@ -138,10 +138,10 @@ a {
   background-color: black;
   width: 40px;
   border-radius: 0px;
-  height: 3px;
+  height: 6px;
 }
 .swiper-pagination-bullet-active {
-  background: $color-seleccion;
+  background: $color-textos-comunes;
 }
 
 //SWIPER
@@ -257,9 +257,26 @@ a {
 
 .hero-portada {
   width: 100%;
-  height: 685px;
+  height: 750px;
   overflow: hidden;
   position: relative;
+
+  .contenedor-header {
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    @include flexbox(row, center, flex-start);
+    background: rgba(0, 0, 0, 0.158);
+    color: rgba(255, 255, 255, 0.911);
+  }
+  .titulo-principal {
+    text-align: center;
+    font-weight: bolder;
+    margin-top: 150px;
+    line-height: 1.5;
+    max-width: 550px;
+  }
   .swiper-slide {
     overflow: hidden; //PARA QUE FUNCIONE EL PARALLAX
   }
@@ -295,9 +312,21 @@ a {
   }
 }
 
+@media (min-width: 768px) {
+  .hero-portada {
+    .titulo-principal {
+      margin-top: 150px;
+    }
+  }
+}
+
 @media (min-width: 1024px) {
   .hero-portada {
     min-height: 100vh;
+    .titulo-principal {
+      max-width: 750px;
+      margin-top: 200px;
+    }
   }
 }
 .oferta {
@@ -494,6 +523,67 @@ footer {
   .contenido-principal {
     width: calc(100% - 320px);
     margin-left: auto;
+  }
+}
+
+//MODAL
+
+.contenedor-modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.432);
+  z-index: 999;
+  @include flexbox(row, center, center);
+  display: none;
+  .contenedor-imagen-modal {
+    width: 100%;
+    max-width: 800px;
+    max-height: 500px;
+    position: relative;
+  }
+  .img-modal {
+    width: 100%;
+    height: 100%;
+    max-width: 800px;
+    max-height: 500px;
+  }
+  .btn {
+    position: absolute;
+    bottom: -80px;
+    width: 40px;
+    height: 40px;
+    @include flexbox(row, center, center);
+    border: none;
+    background: none;
+    font-size: 2.5rem;
+    color: white;
+  }
+  .btn:focus {
+    outline: 2px solid $color-seleccion;
+  }
+  .btn-izquierda {
+    left: 60px;
+  }
+  .btn-derecha {
+    right: 60px;
+  }
+  .btn-cerrar {
+    top: -50px;
+    right: 0px;
+    @include flexbox(column, center, center);
+  }
+  .linea-cerrar {
+    position: absolute;
+    width: 35px;
+    height: 4px;
+    background: white;
+    transform: rotate(135deg);
+  }
+  .linea-cerrar:nth-child(2) {
+    transform: rotate(-135deg);
   }
 }
 

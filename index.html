@@ -1,296 +1,408 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Golden Group</title>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-        crossorigin="" />
-    <link rel="stylesheet" href="/css/estilos.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="/css/estilos.css" />
+  </head>
 
-<body>
+  <body>
     <main class="contenido-principal">
-        <nav class="navegacion-principal">
-            <div class="hamburguesa">
-                <span class="linea-hamburguesa"></span>
-                <span class="linea-hamburguesa"></span>
-                <span class="linea-hamburguesa"></span>
+      <nav class="navegacion-principal">
+        <div class="hamburguesa">
+          <span class="linea-hamburguesa"></span>
+          <span class="linea-hamburguesa"></span>
+          <span class="linea-hamburguesa"></span>
+        </div>
+        <!--A DEFINIR LA TIPOGRAFIA-->
+        <div class="logo">
+          <img class="img-logo" src="/imagenes/your-logo.png" alt="" />
+          <span class="texto-logo">Golden Group</span>
+          <span class="punto">.</span>
+        </div>
+      </nav>
+      <header class="hero-portada">
+        <div class="contenedor-header">
+          <h1 class="titulo-principal">
+            Brindando un espacio construido de alta calidad, efectivo e
+            inspirador.
+          </h1>
+        </div>
+        <div class="swiper-container-tres">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="imagen01 img-01" data-swiper-parallax="55%"></div>
             </div>
-            <!--A DEFINIR LA TIPOGRAFIA-->
-            <div class="logo">
-                <img class="img-logo" src="/imagenes/your-logo.png" alt="">
-                <span class="texto-logo">Golden Group</span> <span class="punto">.</span>
+            <div class="swiper-slide">
+              <div class="imagen01 img-02" data-swiper-parallax="55%"></div>
             </div>
-        </nav>
-        <header class="hero-portada">
-            <div class="swiper-container-tres">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="imagen01 img-01" data-swiper-parallax="55%">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="imagen01 img-02" data-swiper-parallax="55%">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="imagen01 img-03" data-swiper-parallax="55%">
-                        </div>
-                    </div>
-                </div>
-                <!-- Add Pagination -->
-                <div class="swiper-pagination swiper-pagination-white"></div>
+            <div class="swiper-slide">
+              <div class="imagen01 img-03" data-swiper-parallax="55%"></div>
             </div>
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination swiper-pagination-white"></div>
+        </div>
+      </header>
+      <section class="intro">
+        <header class="contenedor-titulos">
+          <h1 class="titulo-principal">vision general</h1>
         </header>
-        <section class="intro">
-            <header class="contenedor-titulos">
-                <h1 class="titulo-principal">Brindando un espacio construido de alta calidad, efectivo e inspirador.
-                </h1>
-            </header>
-            <div class="contenedor-datos">
-                <div class="datos">
-                    <span class="numero">1500M</span>
-                    <p class="texto-comun">area del sitio</p>
-                </div>
-                <div class="datos">
-                    <span class="numero">2000</span>
-                    <p class="texto-comun">areas residenciales</p>
-                </div>
-                <div class="datos">
-                    <span class="numero">$1500</span>
-                    <p class="texto-comun">valor total</p>
-                </div>
+        <div class="contenedor-datos">
+          <div class="datos">
+            <span class="numero">1500M</span>
+            <p class="texto-comun">area del sitio</p>
+          </div>
+          <div class="datos">
+            <span class="numero">2000</span>
+            <p class="texto-comun">areas residenciales</p>
+          </div>
+          <div class="datos">
+            <span class="numero">$1500</span>
+            <p class="texto-comun">valor total</p>
+          </div>
+        </div>
+        <div class="galeria">
+          <div class="contenedor-imagen-galeria">
+            <img
+              class="imagenes-galeria"
+              src="/imagenes/galeria/casa-galeria-01.webp"
+              alt=""
+              data-numero="1"
+            />
+          </div>
+          <div class="contenedor-imagen-galeria">
+            <img
+              class="imagenes-galeria"
+              src="/imagenes/galeria/casa-galeria-02.webp"
+              alt=""
+              data-numero="2"
+            />
+          </div>
+          <div class="contenedor-imagen-galeria">
+            <img
+              class="imagenes-galeria"
+              src="/imagenes/galeria/casa-galeria-03.webp"
+              alt=""
+              data-numero="3"
+            />
+          </div>
+          <div class="contenedor-imagen-galeria">
+            <img
+              class="imagenes-galeria"
+              src="/imagenes/galeria/casa-galeria-04.webp"
+              alt=""
+              data-numero="4"
+            />
+          </div>
+          <div class="contenedor-imagen-galeria">
+            <img
+              class="imagenes-galeria"
+              src="/imagenes/galeria/casa-galeria-05.webp"
+              alt=""
+              data-numero="5"
+            />
+          </div>
+          <div class="contenedor-imagen-galeria">
+            <img
+              class="imagenes-galeria"
+              src="/imagenes/galeria/casa-galeria-06.webp"
+              alt=""
+              data-numero="6"
+            />
+          </div>
+        </div>
+      </section>
+      <section id="testimonios" class="testimoniales">
+        <header class="contenedor-titulos">
+          <p class="mini-textos">compradores felices</p>
+          <h1 class="titulo-principal">testimoniales</h1>
+          <span class="division">
+            <span class="linea-division"></span>
+            <span class="linea-division"></span>
+            <span class="linea-division"></span>
+          </span>
+        </header>
+        <div class="swiper-container-cinco">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide testimonio">
+              <q class="texto-quotes">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Similique modi minima velit error. Architecto veniam
+                necessitatibus officiis dolorum accusamus
+              </q>
+              <span class="texto-comun">Romina</span>
+              <span class="texto-comun">(Diseñadora)</span>
             </div>
-            <div class="galeria">
-                <div class="contenedor-imagen-galeria">
-                    <img src="/imagenes/galeria/casa-galeria-01.webp" alt="">
-                </div>
-                <div class="contenedor-imagen-galeria">
-                    <img src="/imagenes/galeria/casa-galeria-02.webp" alt="">
-                </div>
-                <div class="contenedor-imagen-galeria">
-                    <img src="/imagenes/galeria/casa-galeria-03.webp" alt="">
-                </div>
-                <div class="contenedor-imagen-galeria">
-                    <img src="/imagenes/galeria/casa-galeria-04.webp" alt="">
-                </div>
-                <div class="contenedor-imagen-galeria">
-                    <img src="/imagenes/galeria/casa-galeria-05.webp" alt="">
-                </div>
-                <div class="contenedor-imagen-galeria">
-                    <img src="/imagenes/galeria/casa-galeria-06.webp" alt="">
-                </div>
+            <div class="swiper-slide testimonio">
+              <q class="texto-quotes">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Similique modi minima velit error. Architecto veniam
+                necessitatibus officiis dolorum accusamus
+              </q>
+              <span class="texto-comun">Romina</span>
+              <span class="texto-comun">(Diseñadora)</span>
             </div>
-        </section>
-        <section id="testimonios" class="testimoniales">
-            <header class="contenedor-titulos">
-                <p class="mini-textos">compradores felices</p>
-                <h1 class="titulo-principal">testimoniales</h1>
-                <span class="division"> <span class="linea-division"></span>
-                    <span class="linea-division"></span>
-                    <span class="linea-division"></span> </span>
-            </header>
-            <div class="swiper-container-cinco">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide testimonio"> <q class="texto-quotes">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique modi minima velit error.
-                            Architecto
-                            veniam necessitatibus officiis dolorum accusamus
-                        </q>
-                        <span class="texto-comun">Romina</span>
-                        <span class="texto-comun">(Diseñadora)</span></div>
-                    <div class="swiper-slide testimonio"> <q class="texto-quotes">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique modi minima velit error.
-                            Architecto
-                            veniam necessitatibus officiis dolorum accusamus
-                        </q>
-                        <span class="texto-comun">Romina</span>
-                        <span class="texto-comun">(Diseñadora)</span></div>
-                    <div class="swiper-slide testimonio"> <q class="texto-quotes">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique modi minima velit error.
-                            Architecto
-                            veniam necessitatibus officiis dolorum accusamus
-                        </q>
-                        <span class="texto-comun">Romina</span>
-                        <span class="texto-comun">(Diseñadora)</span></div>
-                    <div class="swiper-slide testimonio"> <q class="texto-quotes">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique modi minima velit error.
-                            Architecto
-                            veniam necessitatibus officiis dolorum accusamus
-                        </q>
-                        <span class="texto-comun">Romina</span>
-                        <span class="texto-comun">(Diseñadora)</span></div>
+            <div class="swiper-slide testimonio">
+              <q class="texto-quotes">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Similique modi minima velit error. Architecto veniam
+                necessitatibus officiis dolorum accusamus
+              </q>
+              <span class="texto-comun">Romina</span>
+              <span class="texto-comun">(Diseñadora)</span>
+            </div>
+            <div class="swiper-slide testimonio">
+              <q class="texto-quotes">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Similique modi minima velit error. Architecto veniam
+                necessitatibus officiis dolorum accusamus
+              </q>
+              <span class="texto-comun">Romina</span>
+              <span class="texto-comun">(Diseñadora)</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="empresas">
+        <div class="swiper-container-cuatro">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide logo-empresa">
+              <img src="/imagenes/logos empresas/logo01.webp" alt="" />
+            </div>
+            <div class="swiper-slide logo-empresa">
+              <img src="/imagenes/logos empresas/logo01.webp" alt="" />
+            </div>
+            <div class="swiper-slide logo-empresa">
+              <img src="/imagenes/logos empresas/logo01.webp" alt="" />
+            </div>
+            <div class="swiper-slide logo-empresa">
+              <img src="/imagenes/logos empresas/logo01.webp" alt="" />
+            </div>
+            <div class="swiper-slide logo-empresa">
+              <img src="/imagenes/logos empresas/logo01.webp" alt="" />
+            </div>
+            <div class="swiper-slide logo-empresa">
+              <img src="/imagenes/logos empresas/logo01.webp" alt="" />
+            </div>
+            <div class="swiper-slide logo-empresa">
+              <img src="/imagenes/logos empresas/logo01.webp" alt="" />
+            </div>
+            <div class="swiper-slide logo-empresa">
+              <img src="/imagenes/logos empresas/logo01.webp" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="cerca-tuyo" class="oferta">
+        <header class="contenedor-titulos">
+          <p class="mini-textos">la mejor oferta</p>
+          <h1 class="titulo-principal">cerca tuyo</h1>
+        </header>
+        <div class="imagen-principal">
+          <img src="/imagenes/oferta/principal-movil.webp" alt="" />
+        </div>
+        <div class="swiper-container-dos">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide imagen-casa">
+              <img src="/imagenes/oferta/habitacion-mini.webp" alt="" />
+            </div>
+            <div class="swiper-slide imagen-casa">
+              <img src="/imagenes/oferta/baño-mini.webp" alt="" />
+            </div>
+            <div class="swiper-slide imagen-casa">
+              <img src="/imagenes/oferta/living-mini.webp" alt="" />
+            </div>
+            <div class="swiper-slide imagen-casa">
+              <img src="/imagenes/oferta/cocina-mini.webp" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="equipo" class="equipo">
+        <header class="contenedor-titulos">
+          <h1 class="titulo-principal">nuestro equipo</h1>
+          <span class="division">
+            <span class="linea-division"></span>
+            <span class="linea-division"></span>
+            <span class="linea-division"></span>
+          </span>
+        </header>
+        <div class="swiper-container carrusel-equipo">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="carta-equipo">
+                <div class="imagen-carta">
+                  <img
+                    src="/imagenes/personas/persona01.webp"
+                    alt="miembro del equipo de golden group"
+                  />
                 </div>
-            </div>
-        </section>
-        <section class="empresas">
-            <div class="swiper-container-cuatro">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide logo-empresa">
-                        <img src="/imagenes/logos empresas/logo01.webp" alt="">
-                    </div>
-                    <div class="swiper-slide logo-empresa"> <img src="/imagenes/logos empresas/logo01.webp" alt="">
-                    </div>
-                    <div class="swiper-slide logo-empresa"> <img src="/imagenes/logos empresas/logo01.webp" alt="">
-                    </div>
-                    <div class="swiper-slide logo-empresa"> <img src="/imagenes/logos empresas/logo01.webp" alt="">
-                    </div>
-                    <div class="swiper-slide logo-empresa"> <img src="/imagenes/logos empresas/logo01.webp" alt="">
-                    </div>
-                    <div class="swiper-slide logo-empresa"> <img src="/imagenes/logos empresas/logo01.webp" alt="">
-                    </div>
-                    <div class="swiper-slide logo-empresa"> <img src="/imagenes/logos empresas/logo01.webp" alt="">
-                    </div>
-                    <div class="swiper-slide logo-empresa"> <img src="/imagenes/logos empresas/logo01.webp" alt="">
-                    </div>
+                <div class="descripcion-carta">
+                  <h2 class="titulo-principal">Ismail Vergara</h2>
+                  <p class="texto-comun">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quod, consequuntur!
+                  </p>
                 </div>
+              </div>
             </div>
-        </section>
-        <section id="cerca-tuyo" class="oferta">
-            <header class="contenedor-titulos">
-                <p class="mini-textos">la mejor oferta</p>
-                <h1 class="titulo-principal">cerca tuyo</h1>
-            </header>
-            <div class="imagen-principal">
-                <img src="/imagenes/oferta/principal-movil.webp" alt="">
-            </div>
-            <div class="swiper-container-dos">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide imagen-casa">
-                        <img src="/imagenes/oferta/habitacion-mini.webp" alt="">
-                    </div>
-                    <div class="swiper-slide imagen-casa">
-                        <img src="/imagenes/oferta/baño-mini.webp" alt="">
-                    </div>
-                    <div class="swiper-slide imagen-casa">
-                        <img src="/imagenes/oferta/living-mini.webp" alt="">
-                    </div>
-                    <div class="swiper-slide imagen-casa">
-                        <img src="/imagenes/oferta/cocina-mini.webp" alt="">
-                    </div>
+            <div class="swiper-slide">
+              <div class="carta-equipo">
+                <div class="imagen-carta">
+                  <img
+                    src="/imagenes/personas/persona02.webp"
+                    alt="miembro del equipo de golden group"
+                  />
                 </div>
-            </div>
-        </section>
-        <section id="equipo" class="equipo">
-            <header class="contenedor-titulos">
-                <h1 class="titulo-principal">nuestro equipo</h1>
-                <span class="division"> <span class="linea-division"></span>
-                    <span class="linea-division"></span>
-                    <span class="linea-division"></span> </span>
-            </header>
-            <div class="swiper-container carrusel-equipo">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="carta-equipo">
-                            <div class="imagen-carta">
-                                <img src="/imagenes/personas/persona01.webp" alt="miembro del equipo de golden group">
-                            </div>
-                            <div class="descripcion-carta">
-                                <h2 class="titulo-principal">Ismail Vergara</h2>
-                                <p class="texto-comun">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-                                    consequuntur!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="carta-equipo">
-                            <div class="imagen-carta">
-                                <img src="/imagenes/personas/persona02.webp" alt="miembro del equipo de golden group">
-                            </div>
-                            <div class=" descripcion-carta">
-                                <h2 class="titulo-principal">Olga Conesa</h2>
-                                <p class="texto-comun">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-                                    consequuntur!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="carta-equipo">
-                            <div class="imagen-carta">
-                                <img src="/imagenes/personas/persona03.webp" alt="miembro del equipo de golden group">
-                            </div>
-                            <div class="descripcion-carta">
-                                <h2 class="titulo-principal">Belen Pallares</h2>
-                                <p class="texto-comun">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-                                    consequuntur!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="carta-equipo">
-                            <div class="imagen-carta">
-                                <img src="/imagenes/personas/persona04.webp" alt="miembro del equipo de golden group">
-                            </div>
-                            <div class=" descripcion-carta">
-                                <h2 class="titulo-principal">Cesareo Berenguer</h2>
-                                <p class="texto-comun">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-                                    consequuntur!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="carta-equipo">
-                            <div class="imagen-carta">
-                                <img src="/imagenes/personas/persona05.webp" alt="miembro del equipo de golden group">
-                            </div>
-                            <div class=" descripcion-carta">
-                                <h2 class="titulo-principal">Anna Botella</h2>
-                                <p class="texto-comun">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-                                    consequuntur!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="carta-equipo">
-                            <div class="imagen-carta">
-                                <img src="/imagenes/personas/persona06.webp" alt="miembro del equipo de golden group">
-                            </div>
-                            <div class=" descripcion-carta">
-                                <h2 class="titulo-principal">Pau Manzano</h2>
-                                <p class="texto-comun">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-                                    consequuntur!</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="descripcion-carta">
+                  <h2 class="titulo-principal">Olga Conesa</h2>
+                  <p class="texto-comun">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quod, consequuntur!
+                  </p>
                 </div>
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
+              </div>
             </div>
-        </section>
-        <section class="google-maps">
-            <header class="contenedor-titulos">
-                <h1 class="titulo-principal">en venta</h1>
-                <p class="texto-comun">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate harum at
-                    est assumenda inventore?</p>
-            </header>
-            <div id="leaflet-mapa" class="contenedor-mapa"></div>
-        </section>
-        <footer>
-            <p class="texto-comun">&copy; Golden Group 2020.</p>
-        </footer>
+            <div class="swiper-slide">
+              <div class="carta-equipo">
+                <div class="imagen-carta">
+                  <img
+                    src="/imagenes/personas/persona03.webp"
+                    alt="miembro del equipo de golden group"
+                  />
+                </div>
+                <div class="descripcion-carta">
+                  <h2 class="titulo-principal">Belen Pallares</h2>
+                  <p class="texto-comun">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quod, consequuntur!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="carta-equipo">
+                <div class="imagen-carta">
+                  <img
+                    src="/imagenes/personas/persona04.webp"
+                    alt="miembro del equipo de golden group"
+                  />
+                </div>
+                <div class="descripcion-carta">
+                  <h2 class="titulo-principal">Cesareo Berenguer</h2>
+                  <p class="texto-comun">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quod, consequuntur!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="carta-equipo">
+                <div class="imagen-carta">
+                  <img
+                    src="/imagenes/personas/persona05.webp"
+                    alt="miembro del equipo de golden group"
+                  />
+                </div>
+                <div class="descripcion-carta">
+                  <h2 class="titulo-principal">Anna Botella</h2>
+                  <p class="texto-comun">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quod, consequuntur!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="carta-equipo">
+                <div class="imagen-carta">
+                  <img
+                    src="/imagenes/personas/persona06.webp"
+                    alt="miembro del equipo de golden group"
+                  />
+                </div>
+                <div class="descripcion-carta">
+                  <h2 class="titulo-principal">Pau Manzano</h2>
+                  <p class="texto-comun">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quod, consequuntur!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+      <section class="google-maps">
+        <header class="contenedor-titulos">
+          <h1 class="titulo-principal">en venta</h1>
+          <p class="texto-comun">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+            harum at est assumenda inventore?
+          </p>
+        </header>
+        <div id="leaflet-mapa" class="contenedor-mapa"></div>
+      </section>
+      <footer>
+        <p class="texto-comun">&copy; Golden Group 2020.</p>
+      </footer>
     </main>
+    <!--MODAL-IMAGENES-PRINCIPALES-->
+    <div class="contenedor-modal">
+      <div class="contenedor-imagen-modal">
+        <div class="btn btn-cerrar">
+          <span class="linea-cerrar"></span><span class="linea-cerrar"></span>
+        </div>
+        <img src="" alt="" class="img-modal" />
+        <button class="btn btn-izquierda">
+          <i class="fas fa-angle-left"></i>
+        </button>
+        <button class="btn btn-derecha">
+          <i class="fas fa-angle-right"></i>
+        </button>
+      </div>
+    </div>
     <!--NAV DESKTOP-->
     <aside class="nav-desktop">
-        <div class="logo">
-            <img class="img-logo" src="/imagenes/your-logo.png" alt="">
-            <span class="texto-logo">Golden Group</span> <span class="punto">.</span>
-        </div>
-        <ul class="links-nav">
-            <li class="link mini-textos"><a href="#">inicio</a></li>
-            <li class="link mini-textos"><a href="#testimonios">testimonios</a></li>
-            <li class="link mini-textos"><a href="#cerca-tuyo">cerca tuyo</a></li>
-            <li class="link mini-textos"><a href="#equipo">equipo</a></li>
-        </ul>
+      <div class="logo">
+        <img class="img-logo" src="/imagenes/your-logo.png" alt="" />
+        <span class="texto-logo">Golden Group</span>
+        <span class="punto">.</span>
+      </div>
+      <ul class="links-nav">
+        <li class="link mini-textos"><a href="#">inicio</a></li>
+        <li class="link mini-textos"><a href="#testimonios">testimonios</a></li>
+        <li class="link mini-textos"><a href="#cerca-tuyo">cerca tuyo</a></li>
+        <li class="link mini-textos"><a href="#equipo">equipo</a></li>
+      </ul>
     </aside>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-        crossorigin=""></script>
+    <script
+      src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+      integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+      crossorigin=""
+    ></script>
     <script src="js/app.js"></script>
-</body>
-
+  </body>
 </html>
