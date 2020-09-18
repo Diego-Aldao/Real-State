@@ -5,18 +5,9 @@
   scroll-behavior: smooth;
 }
 
+//FUENTES
+
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
-
-$color-textos: #1b1c21;
-$color-seleccion: #bf9410;
-$color-textos-comunes: #888484;
-$color-titulos: #2d2e32;
-$bg-secciones-secundarias: #eef2f7;
-$bg-secciones-terciarias: #222222;
-$fuente-principal: "Old Standard TT";
-$fuente-principal-bold: "Old Standard TT Bold";
-$fuente-textos: "Open Sans";
-
 @font-face {
   font-family: "Old Standard TT";
   src: url("/Fonts/OldStandardTT-Regular.ttf");
@@ -31,9 +22,19 @@ $fuente-textos: "Open Sans";
   font-family: "Open Sans";
   src: url("/Fonts/OpenSans-Regular.ttf");
 }
+$fuente-principal: "Old Standard TT";
+$fuente-principal-bold: "Old Standard TT Bold";
+$fuente-textos: "Open Sans";
+
+//COLORES
+$color-textos: #1b1c21;
+$color-seleccion: #bf9410;
+$color-textos-comunes: #888484;
+$color-titulos: #2d2e32;
+$bg-secciones-secundarias: #eef2f7;
+$bg-secciones-terciarias: #222222;
 
 //MIXINS
-
 @mixin flexbox($direction, $justify, $align) {
   display: flex;
   flex-direction: $direction;
@@ -42,7 +43,6 @@ $fuente-textos: "Open Sans";
 }
 
 //GLOBALES
-
 body {
   overflow-x: hidden;
 }
@@ -66,9 +66,9 @@ a {
 }
 
 .numero {
+  color: $color-seleccion;
   font-size: 40px;
   font-family: $fuente-principal-bold;
-  color: $color-seleccion;
   font-weight: bold;
 }
 
@@ -79,21 +79,27 @@ a {
 }
 
 .mini-textos {
+  margin: 0 0 25px 0;
+  color: $color-seleccion;
   font-size: 14px;
   font-family: $fuente-textos;
-  color: $color-seleccion;
   text-transform: uppercase;
   font-weight: bolder;
   letter-spacing: 1px;
-  margin: 0 0 25px 0;
 }
 
 .texto-quotes {
+  color: $color-textos;
   font-size: 22px;
   font-family: $fuente-principal;
-  color: $color-textos;
   text-align: center;
   line-height: 1.5;
+}
+
+.contenedor-titulos {
+  width: 100%;
+  margin-bottom: 50px;
+  text-align: center;
 }
 
 .logo {
@@ -106,42 +112,31 @@ a {
     margin-right: 5px;
   }
   .texto-logo {
-    font-family: "DM Serif Display", serif;
-    font-size: 28px;
     color: black;
-    transform: scale(1, 1);
     @include flexbox(row, center, center);
+    transform: scale(1, 1);
+    font-size: 28px;
+    font-family: "DM Serif Display", serif;
     font-weight: bolder;
   }
   .punto {
     width: 15px;
-    font-size: 2.5rem;
     @include flexbox(row, center, flex-end);
     color: $color-seleccion;
+    font-size: 2.5rem;
   }
 }
 
 .division {
   width: 100%;
-  display: block;
   height: 20px;
   @include flexbox(row, center, center);
   .linea-division {
     width: 20px;
     height: 2px;
-    background: $color-seleccion;
     margin: 0 5px;
+    background: $color-seleccion;
   }
-}
-
-.swiper-pagination-bullet {
-  background-color: black;
-  width: 40px;
-  border-radius: 0px;
-  height: 6px;
-}
-.swiper-pagination-bullet-active {
-  background: $color-textos-comunes;
 }
 
 //SWIPER
@@ -158,20 +153,29 @@ a {
   max-width: 900px;
   margin: 0 auto;
 }
-
 .swiper-slide {
-  text-align: center;
   @include flexbox(row, center, center);
+  text-align: center;
+}
+.swiper-pagination-bullet {
+  width: 40px;
+  height: 6px;
+  border-radius: 0px;
+  background-color: black;
+}
+.swiper-pagination-bullet-active {
+  background: $color-textos-comunes;
 }
 
+//INICIO NAVEGACION DESKTOP
 .nav-desktop {
   position: fixed;
+  top: 0;
   left: 0;
   width: 320px;
-  background: white;
   height: 100%;
-  top: 0;
   display: none; //OCULTA HASTA LOS 1024PX
+  background: white;
   .logo {
     height: 100px;
     width: 100%;
@@ -192,25 +196,24 @@ a {
     list-style-type: none;
   }
   .link {
-    margin: 25px 0;
-    color: $color-textos-comunes;
     position: relative;
-    overflow: hidden;
     z-index: 2;
-    transition: color 0.1s ease-in-out 0.1s;
+    margin: 25px 0;
     padding: 5px;
+    overflow: hidden;
+    color: $color-textos-comunes;
+    transition: color 0.1s ease-in-out 0.1s;
   }
   .link:after {
     content: "";
-    width: 100%;
-    height: 100%;
     position: absolute;
     left: -100%;
     top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
     background: $color-seleccion;
     transition: left 0.2s ease-in-out;
-
-    z-index: -1;
   }
   .link:hover {
     & {
@@ -221,61 +224,77 @@ a {
     }
   }
 }
+//INICIO QUERYS NAV DESKTOP
+@media (min-width: 1024px) {
+  .nav-desktop {
+    @include flexbox(column, flex-start, center);
+  }
+}
 
-//INICIO NAV-PRINCIPAL
+//INICIO CONTENIDO PRINCIPAL
 .contenido-principal {
   width: 100%;
 }
 
+//INICIO QUERYS CONTENIDO PRINCIPAL
+@media (min-width: 1024px) {
+  .contenido-principal {
+    width: calc(100% - 320px);
+    margin-left: auto;
+  }
+}
+
+//INICIO NAV-PRINCIPAL
 .navegacion-principal {
   width: 100%;
   height: 70px;
-  padding: 0 10px;
   @include flexbox(row, flex-start, center);
+  padding: 0 10px;
   .hamburguesa {
-    width: 40px;
-    height: 40px;
     position: fixed;
     right: 10px;
     z-index: 999;
+    width: 40px;
+    height: 40px;
     @include flexbox(column, center, center);
     background: white;
   }
   .linea-hamburguesa {
     width: 25px;
     height: 3px;
-    background: $color-seleccion;
     margin: 3px 0;
+    background: $color-seleccion;
   }
 }
 
+//INICIO QUERYS NAV-PRINCIPAL
 @media (min-width: 1024px) {
   .navegacion-principal {
     display: none;
   }
 }
 
+//INICIO PORTADA
 .hero-portada {
+  position: relative;
   width: 100%;
   height: 750px;
   overflow: hidden;
-  position: relative;
-
   .contenedor-header {
     position: absolute;
     z-index: 99;
     width: 100%;
     height: 100%;
     @include flexbox(row, center, flex-start);
-    background: rgba(0, 0, 0, 0.158);
     color: rgba(255, 255, 255, 0.911);
+    background: rgba(0, 0, 0, 0.158);
   }
   .titulo-principal {
+    max-width: 550px;
+    margin-top: 150px;
     text-align: center;
     font-weight: bolder;
-    margin-top: 150px;
     line-height: 1.5;
-    max-width: 550px;
   }
   .swiper-slide {
     overflow: hidden; //PARA QUE FUNCIONE EL PARALLAX
@@ -284,7 +303,6 @@ a {
     bottom: 0;
   }
   .imagen01 {
-    background: red;
     position: absolute;
     left: 0;
     top: 0;
@@ -312,6 +330,7 @@ a {
   }
 }
 
+//INCIO QUERYS PORTADA
 @media (min-width: 768px) {
   .hero-portada {
     .titulo-principal {
@@ -319,7 +338,6 @@ a {
     }
   }
 }
-
 @media (min-width: 1024px) {
   .hero-portada {
     min-height: 100vh;
@@ -329,15 +347,8 @@ a {
     }
   }
 }
-.oferta {
-  width: 100%;
-  overflow: hidden;
-  .imagen-casa {
-    background: aqua;
-    height: 70px;
-  }
-}
 
+//INICIO SECCION PRINCIPAL
 .intro {
   width: 100%;
   padding: 100px 20px;
@@ -349,18 +360,18 @@ a {
   .datos {
     width: 100%;
     height: 100px;
-    margin: 10px 0;
     @include flexbox(column, space-evenly, center);
+    margin: 10px 0;
     .texto-comun {
       text-transform: capitalize;
     }
   }
   .galeria {
     width: 100%;
-    @include flexbox(row, space-evenly, center);
-    flex-wrap: wrap;
     max-width: 1200px;
+    @include flexbox(row, space-evenly, center);
     margin: 100px auto 0;
+    flex-wrap: wrap;
   }
   .contenedor-imagen-galeria {
     width: 300px;
@@ -369,6 +380,7 @@ a {
   }
 }
 
+//INICIO QUERYS SECCION PRINCIPAL
 @media (min-width: 768px) {
   .intro {
     .datos {
@@ -377,12 +389,7 @@ a {
   }
 }
 
-.contenedor-titulos {
-  width: 100%;
-  text-align: center;
-  margin-bottom: 50px;
-}
-
+//INCIO TESTIMONIALES
 .testimoniales {
   background: $bg-secciones-secundarias;
   width: 100%;
@@ -404,6 +411,7 @@ a {
   }
 }
 
+//INICIO EMPRESAS
 .empresas {
   width: 100%;
   height: 200px;
@@ -417,27 +425,28 @@ a {
   }
 }
 
+//INICIO OFERTAS
 .oferta {
   width: 100%;
   padding: 100px 20px;
   .contenedor-imagen-principal {
     width: 100%;
-    background: red;
-    margin-bottom: 20px;
     height: 50vw;
     max-width: 720px;
-    margin: 0 auto 20px;
     max-height: 400px;
+    margin: 0 auto 20px;
   }
   .swiper-container-dos {
-    margin: 0 auto;
     max-width: 720px;
+    margin: 0 auto;
   }
   .imagen-casa {
     height: 30vw;
     max-height: 240px;
   }
 }
+
+//INICIO EQUIPO
 .equipo {
   width: 100%;
   padding: 100px 20px;
@@ -447,8 +456,7 @@ a {
   }
   .carta-equipo {
     width: 100%;
-    width: 280px;
-    max-width: 300px;
+    max-width: 280px;
     height: 80%;
     @include flexbox(column, center, center);
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.089);
@@ -473,13 +481,14 @@ a {
   }
 }
 
+//INICIO SECCION FINAL
 .google-maps {
   width: 100%;
   @include flexbox(row, center, center);
   flex-wrap: wrap;
   .contenedor-titulos {
-    @include flexbox(column, flex-start, center);
     height: 350px;
+    @include flexbox(column, flex-start, center);
     padding: 50px 20px;
     margin: 0;
     .texto-comun {
@@ -498,6 +507,8 @@ a {
   }
 }
 
+//INICIO QUERYS SECCION FINAL
+
 @media (min-width: 768px) {
   .google-maps {
     .contenedor-titulos {
@@ -509,45 +520,38 @@ a {
   }
 }
 
+//INICIO FOOTER
 footer {
   width: 100%;
   height: 50px;
-  background: $bg-secciones-terciarias;
   @include flexbox(row, center, center);
+  background: $bg-secciones-terciarias;
   .texto-comun {
     color: $color-seleccion;
   }
 }
 
-@media (min-width: 1024px) {
-  .contenido-principal {
-    width: calc(100% - 320px);
-    margin-left: auto;
-  }
-}
-
 //MODAL
-
 .contenedor-modal {
-  width: 100%;
-  height: 100%;
   position: fixed;
   left: 0;
   top: 0;
-  background: rgba(0, 0, 0, 0.432);
   z-index: 999;
+  width: 100%;
+  height: 100%;
   @include flexbox(row, center, center);
-  display: none;
+  background: rgba(0, 0, 0, 0.432);
+  display: none; //PARA CAMBIAR CON JS
   .contenedor-imagen-modal {
+    position: relative;
     width: 100%;
     max-width: 800px;
     max-height: 500px;
-    position: relative;
   }
   .img-modal {
     width: 100%;
-    height: 100%;
     max-width: 800px;
+    height: 100%;
     max-height: 500px;
   }
   .btn {
@@ -557,9 +561,9 @@ footer {
     height: 40px;
     @include flexbox(row, center, center);
     border: none;
+    color: white;
     background: none;
     font-size: 2.5rem;
-    color: white;
   }
   .btn:focus {
     outline: 2px solid $color-seleccion;
@@ -584,13 +588,5 @@ footer {
   }
   .linea-cerrar:nth-child(2) {
     transform: rotate(-135deg);
-  }
-}
-
-//NAV DESKTOP
-
-@media (min-width: 1024px) {
-  .nav-desktop {
-    @include flexbox(column, flex-start, center);
   }
 }
