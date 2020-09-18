@@ -1,6 +1,8 @@
 var swiper = new Swiper(".swiper-container", {
   slidesPerView: 1,
   spaceBetween: 30,
+  autoplay: true,
+  speed: 2000,
   breakpoints: {
     640: {
       slidesPerView: 2,
@@ -151,4 +153,16 @@ modal.addEventListener("click", (e) => {
 
 btnCerrarModal.addEventListener("click", () => {
   modal.style.display = "none";
+});
+
+//SEGUNDA GALERIA
+
+const imgPrincipal = document.querySelector(".img-principal");
+const imgPequeñas = document.querySelectorAll(".imagen-casa");
+
+imgPequeñas.forEach((imagen) => {
+  imagen.addEventListener("click", (e) => {
+    imgActual = e.target.src;
+    imgPrincipal.src = imgActual;
+  });
 });

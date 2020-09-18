@@ -593,7 +593,7 @@ a {
   padding: 100px 20px;
 }
 
-.oferta .imagen-principal {
+.oferta .contenedor-imagen-principal {
   width: 100%;
   background: red;
   margin-bottom: 20px;
